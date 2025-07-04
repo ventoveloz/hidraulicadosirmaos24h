@@ -1,0 +1,37 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f7f7f7;
+    text-align: center;
+}
+header {
+    padding: 20px;
+    background: #003366;
+    color: white;
+}
+.logo {
+    max-width: 200px;
+}
+.mascotes {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 30px;
+}
+.mascote {
+    max-width: 200px;
+}
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
