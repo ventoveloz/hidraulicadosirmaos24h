@@ -1,26 +1,142 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hidráulica dos Irmãos</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hidráulica dos Irmãos</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      color: #333;
+    }
+    header {
+      background-color: #00264d;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    header img.logo {
+      max-height: 100px;
+      margin-bottom: 10px;
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1581578017421-dc76da0ed1e8?auto=format&fit=crop&w=1950&q=80') no-repeat center/cover;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-shadow: 1px 1px 5px #000;
+    }
+    .hero h1 {
+      font-size: 2.5em;
+    }
+    .section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .card {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      flex: 1 1 250px;
+      text-align: center;
+    }
+    .cta {
+      background-color: #004080;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    .cta button {
+      background-color: #00cc66;
+      color: white;
+      border: none;
+      padding: 15px 25px;
+      font-size: 1em;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    footer {
+      background-color: #001f3f;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+    }
+    img.mascote {
+      max-height: 150px;
+      display: block;
+      margin: 20px auto;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <img src="logo.png" alt="Logo Hidráulica dos Irmãos" class="logo" />
-        <h1>Hidráulica dos Irmãos</h1>
-        <p>Serviços hidráulicos 24h no Rio de Janeiro</p>
-    </header>
+  <header>
+    <img src="logo.png" alt="Logo Hidráulica dos Irmãos" class="logo">
+    <h1>Hidráulica dos Irmãos</h1>
+    <p>Serviços Hidráulicos 24h no Rio de Janeiro</p>
+  </header>
 
-    <section class="mascotes">
-        <img src="irmao1.png" alt="Mascote 1" class="mascote" />
-        <img src="irmao2.png" alt="Mascote 2" class="mascote" />
-    </section>
+  <div class="hero">
+    <h1>Soluções rápidas para emergências hidráulicas!</h1>
+  </div>
 
-    <a href="https://wa.me/5521997083434" class="whatsapp" target="_blank">
-        💬 Fale conosco no WhatsApp
+  <div class="section">
+    <h2>Por que escolher a Hidráulica dos Irmãos?</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Atendimento 24h</h3>
+        <p>Estamos disponíveis dia e noite para emergências.</p>
+      </div>
+      <div class="card">
+        <h3>Profissional Especializado</h3>
+        <p>Equipe treinada com anos de experiência.</p>
+      </div>
+      <div class="card">
+        <h3>Orçamento Rápido</h3>
+        <p>Resolvemos rápido e com preços justos.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <img src="https://cdn-icons-png.flaticon.com/512/2933/2933820.png" alt="Personagem Hidráulico" class="mascote">
+    <h2>Serviços que oferecemos</h2>
+    <div class="cards">
+      <div class="card">Reparo de Válvula</div>
+      <div class="card">Desentupimento</div>
+      <div class="card">Instalação de Aquecedor</div>
+      <div class="card">Detecção de Vazamentos</div>
+    </div>
+  </div>
+
+  <div class="cta">
+    <h2>Solicite seu orçamento agora mesmo</h2>
+    <p>Chame no WhatsApp e fale direto com nossa equipe!</p>
+    <a href="https://wa.me/5521997083434" target="_blank">
+      <button>Chamar no WhatsApp</button>
     </a>
+  </div>
+
+  <footer>
+    &copy; 2025 Hidráulica dos Irmãos — Todos os direitos reservados.<br>
+    CNPJ: 00.000.000/0000-00
+  </footer>
 </body>
 </html>
+
