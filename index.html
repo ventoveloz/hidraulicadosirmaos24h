@@ -6,12 +6,6 @@
   <title>Hidráulica dos Irmãos</title>
   <meta name="description" content="Hidráulica dos Irmãos — serviços hidráulicos 24h no Rio de Janeiro: desentupimento, reparos, aquecedores e detecção de vazamentos. Chame no WhatsApp agora."/>
   <link rel="canonical" href="https://hidraulicadosirmaos.exemplo" />
-  
-  <!-- Open Graph / Social -->
-  <meta property="og:title" content="Hidráulica dos Irmãos" />
-  <meta property="og:description" content="Serviços Hidráulicos 24h no Rio de Janeiro" />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://images.unsplash.com/photo-1624549689369-1afc0bffb5f0?q=80&w=1600&auto=format&fit=crop" />
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-LJ3W2GYMTL"></script>
@@ -21,27 +15,21 @@
   </script>
 
   <style>
-    :root {
-      --brand:#004080;
-      --brand-dark:#00264d;
-      --accent:#00cc66;
-      --bg:#f7f7f7;
-      --text:#333;
-    }
+    :root { --brand:#004080; --brand-dark:#00264d; --accent:#00cc66; --bg:#f7f7f7; --text:#333; }
     *{box-sizing:border-box}
     body { margin: 0; font-family: Arial, sans-serif; background: var(--bg); color: var(--text); }
     a{ color: inherit; text-decoration: none; }
     header { background: var(--brand-dark); color: #fff; padding: 16px 20px; position: sticky; top:0; z-index:10; box-shadow:0 2px 8px rgba(0,0,0,.1); }
     .topbar { max-width: 1100px; margin:0 auto; display:flex; align-items:center; gap:16px; }
     .logo { display:flex; align-items:center; gap:12px; }
-    .logo img{ height:44px; width:44px; }
+    .logo .mark{ height:44px; width:44px; display:grid; place-items:center; background:rgba(255,255,255,.08); border-radius:10px; }
     .logo h1{ font-size:1.25rem; margin:0; letter-spacing:.3px; }
     .tagline{ opacity:.9; font-size:.9rem; margin-left:auto; }
 
     .hero { min-height: 52vh; display:grid; place-items:center; text-align:center; color:#fff; position:relative; overflow:hidden; }
-    .hero::before{ content:""; position:absolute; inset:0; background-image:url('https://images.unsplash.com/photo-1528688892781-027ed85d7a8f?q=80&w=2000&auto=format&fit=crop'); background-size:cover; background-position:center; filter:brightness(.45); }
+    .hero::before{ content:""; position:absolute; inset:0; background-image:url('https://images.unsplash.com/photo-1581578017421-dc76da0ed1e8?auto=format&fit=crop&w=2000&q=80'); background-size:cover; background-position:center; filter:brightness(.45); }
     .hero > *{ position:relative; }
-    .hero h2{ font-size: clamp(1.8rem, 2.5vw + 1rem, 3rem); margin:0 12px 10px; }
+    .hero h2{ font-size: clamp(1.8rem, 2.5vw + 1rem, 3rem); margin:0 12px 10px; text-shadow:0 2px 6px rgba(0,0,0,.35); }
     .hero p{ font-size:1.05rem; opacity:.95; margin:0 12px 22px; }
     .btn{ background:var(--accent); color:#fff; border:none; padding:14px 22px; border-radius:10px; font-size:1rem; cursor:pointer; box-shadow:0 3px 10px rgba(0,0,0,.15); }
     .btn:hover{ filter:brightness(.95); }
@@ -52,7 +40,6 @@
 
     .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 18px; }
     .card { background:#fff; padding:20px; border-radius:14px; box-shadow:0 2px 10px rgba(0,0,0,.06); text-align:center; }
-    .card img.icon{ width:52px; height:52px; margin-bottom:10px; filter: invert(19%) sepia(21%) saturate(2384%) hue-rotate(182deg) brightness(90%) contrast(98%); }
     .card h4{ margin:6px 0 8px; font-size:1.1rem; }
     .card p{ margin:0; color:#555; }
 
@@ -72,13 +59,18 @@
 
     /* Small helpers */
     .phone { white-space:nowrap; }
+    .icon{ width:52px; height:52px; margin:0 auto 10px; display:block; }
+    svg{ shape-rendering:geometricPrecision }
   </style>
 </head>
 <body>
   <header>
     <div class="topbar">
       <a class="logo" href="#top" aria-label="Hidráulica dos Irmãos - início">
-        <img src="https://www.svgrepo.com/show/138509/pipe-valve.svg" alt="Ícone de válvula/encanamento" loading="lazy" />
+        <div class="mark" aria-hidden="true">
+          <!-- ÍCONE VÁLVULA INLINE (sem hotlink) -->
+          <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill="#fff" d="M3 10h3V7h2v3h6V7h2v3h5v2h-5v5a2 2 0 0 1-2 2h-1v-2h1v-5H8v5h1v2H8a2 2 0 0 1-2-2v-5H3z"/></svg>
+        </div>
         <div>
           <h1>Hidráulica dos Irmãos</h1>
           <div class="tagline">Serviços Hidráulicos 24h no Rio de Janeiro</div>
@@ -99,17 +91,20 @@
     <p class="kicker">Equipe experiente, plantão 24h e orçamento rápido.</p>
     <div class="cards">
       <div class="card">
-        <img class="icon" alt="Relógio 24h" src="https://www.svgrepo.com/show/532999/clock-three.svg" loading="lazy"/>
+        <!-- ÍCONE RELÓGIO INLINE -->
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="#00264d" d="M12 1.75A10.25 10.25 0 1 0 22.25 12 10.26 10.26 0 0 0 12 1.75m0 18.5A8.25 8.25 0 1 1 20.25 12 8.26 8.26 0 0 1 12 20.25M12.75 7h-1.5v6l5 3 .75-1.23-4.25-2.52z"/></svg>
         <h4>Atendimento 24h</h4>
         <p>Dia e noite para emergências em toda a cidade.</p>
       </div>
       <div class="card">
-        <img class="icon" alt="Profissional" src="https://www.svgrepo.com/show/509789/user-badge.svg" loading="lazy"/>
+        <!-- ÍCONE BADGE INLINE -->
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="#00264d" d="M12 1 9.5 4.5 5 5l2.9 3.3L7.2 13 12 11l4.8 2-0.7-4.7L19 5l-4.5-.5zM5 15.5V23l7-3 7 3v-7.5L12 13z"/></svg>
         <h4>Profissional Especializado</h4>
         <p>Anos de experiência e equipamentos adequados.</p>
       </div>
       <div class="card">
-        <img class="icon" alt="Orçamento" src="https://www.svgrepo.com/show/521606/receipt-check.svg" loading="lazy"/>
+        <!-- ÍCONE RECIBO INLINE -->
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="#00264d" d="M6 2 4 4v18l2-1 2 1 2-1 2 1 2-1 2 1 2-1V4l-2-2zm2 5h8v2H8zm0 4h8v2H8zm0 4h5v2H8z"/></svg>
         <h4>Orçamento Rápido</h4>
         <p>Avaliação transparente e sem surpresa no preço.</p>
       </div>
@@ -120,31 +115,42 @@
     <h3>Serviços que oferecemos</h3>
     <div class="cards">
       <div class="card">
-        <img class="icon" src="https://www.svgrepo.com/show/138509/pipe-valve.svg" alt="Reparo de válvula" loading="lazy" />
+        <!-- ÍCONE VÁLVULA -->
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="#00264d" d="M3 10h3V7h2v3h6V7h2v3h5v2h-5v5a2 2 0 0 1-2 2h-1v-2h1v-5H8v5h1v2H8a2 2 0 0 1-2-2v-5H3z"/></svg>
         <h4>Reparo de Válvula</h4>
         <p>Substituição e regulagem de válvulas e registros.</p>
       </div>
       <div class="card">
-        <img class="icon" src="https://www.svgrepo.com/show/465878/pipe-4.svg" alt="Desentupimento" loading="lazy" />
+        <!-- ÍCONE TUBULAÇÃO -->
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="#00264d" d="M3 9h8V5h2v4h8v2h-8v8h-2v-8H3z"/></svg>
         <h4>Desentupimento</h4>
         <p>Coifas, pias, ralos e rede de esgoto.</p>
       </div>
       <div class="card">
-        <img class="icon" src="https://www.svgrepo.com/show/493983/gas-water-heater.svg" alt="Instalação de aquecedor" loading="lazy" />
+        <!-- ÍCONE AQUECEDOR -->
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="#00264d" d="M7 2h10a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2m5 4a3 3 0 0 0-3 3c0 2 3 3.5 3 5.5S9 17 9 17s5-.5 5-4.5S12 11 12 9a3 3 0 0 0 0-3"/></svg>
         <h4>Instalação de Aquecedor</h4>
         <p>Instalação e manutenção de aquecedores a gás.</p>
       </div>
       <div class="card">
-        <img class="icon" src="https://www.svgrepo.com/show/428696/pipe-leak-plumbing-broken.svg" alt="Detecção de vazamentos" loading="lazy" />
+        <!-- ÍCONE VAZAMENTO -->
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="#00264d" d="M12 3l-4 4 1.4 1.4L11 6.8V16a3 3 0 1 0 6 0h-2a1 1 0 1 1-2 0V6.8l1.6 1.6L16 7z"/></svg>
         <h4>Detecção de Vazamentos</h4>
         <p>Identificação precisa para evitar desperdício.</p>
       </div>
     </div>
 
+    <!-- GALERIA: coloque suas próprias fotos em /assets/ e troque os links abaixo -->
     <div class="gallery" aria-label="Fotos ilustrativas de serviços hidráulicos">
-      <img src="https://images.unsplash.com/photo-1719257767993-6b9cb9a1b3f8?q=80&w=1600&auto=format&fit=crop" alt="Profissional ajustando tubulação sob a pia (Unsplash)" loading="lazy"/>
-      <img src="https://images.unsplash.com/photo-1603882234692-f346ec8561d6?q=80&w=1600&auto=format&fit=crop" alt="Técnico trabalhando sob a pia (Unsplash)" loading="lazy"/>
-      <img src="https://images.pexels.com/photos/14953886/pexels-photo-14953886.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Ferramentas de hidráulica sobre projeto (Pexels)" loading="lazy"/>
+      <picture>
+        <img referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1719257767993-6b9cb9a1b3f8?auto=format&fit=crop&w=1600&q=80" alt="Profissional ajustando tubulação sob a pia (Unsplash)" loading="lazy"/>
+      </picture>
+      <picture>
+        <img referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1603882234692-f346ec8561d6?auto=format&fit=crop&w=1600&q=80" alt="Técnico trabalhando sob a pia (Unsplash)" loading="lazy"/>
+      </picture>
+      <picture>
+        <img referrerpolicy="no-referrer" src="https://images.pexels.com/photos/14953886/pexels-photo-14953886.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Ferramentas de hidráulica sobre projeto (Pexels)" loading="lazy"/>
+      </picture>
     </div>
   </section>
 
@@ -156,7 +162,7 @@
 
   <footer>
     &copy; 2025 Hidráulica dos Irmãos — Todos os direitos reservados. CNPJ: 00.000.000/0000-00<br/>
-    <span class="credits">Imagens: fotos de <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a> e <a href="https://pexels.com" target="_blank" rel="noopener">Pexels</a>; ícones em SVG de <a href="https://www.svgrepo.com/" target="_blank" rel="noopener">SVGRepo</a>.</span>
+    <span class="credits">Imagens: fotos de Unsplash e Pexels; ícones inline (sem dependência externa).</span>
   </footer>
 
   <!-- Floating WhatsApp Button -->
@@ -170,7 +176,7 @@
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Hidráulica dos Irmãos",
-    "image": "https://images.unsplash.com/photo-1528688892781-027ed85d7a8f?q=80&w=1200&auto=format&fit=crop",
+    "image": "https://images.unsplash.com/photo-1581578017421-dc76da0ed1e8?auto=format&fit=crop&w=1200&q=80",
     "telephone": "+55-21-99708-3434",
     "areaServed": "Rio de Janeiro, RJ",
     "url": "https://hidraulicadosirmaos.exemplo",
