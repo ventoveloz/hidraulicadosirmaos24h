@@ -21,11 +21,11 @@
   <!-- Performance hints -->
   <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
   <!-- Favicon / PWA basic icons -->
-  <link rel="icon" type="image/png" href="logo.png?v=4" sizes="32x32">
-  <link rel="apple-touch-icon" href="logo.png?v=4">
+  <link rel="icon" type="image/png" href="logo.png?v=5" sizes="32x32">
+  <link rel="apple-touch-icon" href="logo.png?v=5">
   <!-- Preload hero e logo -->
   <link rel="preload" as="image" href="https://images.unsplash.com/photo-1581578017421-dc76da0ed1e8?auto=format&fit=crop&w=2000&q=80" imagesrcset="https://images.unsplash.com/photo-1581578017421-dc76da0ed1e8?auto=format&fit=crop&w=1200&q=80 1200w, https://images.unsplash.com/photo-1581578017421-dc76da0ed1e8?auto=format&fit=crop&w=2000&q=80 2000w" imagesizes="100vw">
-  <link rel="preload" as="image" href="logo.png?v=4">
+  <link rel="preload" as="image" href="logo.png?v=5">
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-LJ3W2GYMTL"></script>
@@ -93,9 +93,9 @@
     /* Small helpers */
     .icon{ width:52px; height:52px; margin:0 auto 10px; display:block; }
     svg{ shape-rendering:geometricPrecision }
-    .logo .mark img{width:100%;height:100%;object-fit:contain;display:block}
+    .logo .mark img, .logo-img{width:44px;height:44px;object-fit:contain;display:block}
 
-    /* Mascotes placeholder (se quiser inserir depois) */
+    /* Mascotes */
     .mascotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:16px}
     .mascotes .card img{width:100%;height:180px;object-fit:cover;border-radius:12px}
   </style>
@@ -105,8 +105,8 @@
     <div class="topbar">
       <a class="logo" href="#top" aria-label="Hidráulica dos Irmãos - início">
         <div class="mark" aria-hidden="true">
-          <!-- LOGO OFICIAL -->
-          <img class="icon" src="logo.png?v=4" alt="Logomarca Hidráulica dos Irmãos" width="44" height="44" decoding="async" fetchpriority="high" onerror="this.onerror=null; this.src='irmao1.png';" />
+          <!-- LOGO OFICIAL (local) -->
+          <img class="logo-img" src="logo.png?v=5" alt="Logomarca Hidráulica dos Irmãos" decoding="async" fetchpriority="high" onerror="this.onerror=null; this.src='irmao1.png';" />
         </div>
         <div>
           <h1>Hidráulica dos Irmãos</h1>
@@ -157,15 +157,15 @@
         </div>
       </div>
 
-      <!-- Mascotes (opcional) -->
-      <div class="mascotes" aria-label="Mascotes da marca (adicione suas imagens se quiser)">
+      <!-- Mascotes (agora usando arquivos locais do repositório) -->
+      <div class="mascotes" aria-label="Mascotes da marca">
         <div class="card">
-          <img src="https://picsum.photos/seed/mascote1/600/400" width="600" height="400" alt="Mascote 1 da Hidráulica dos Irmãos" loading="lazy" decoding="async"/>
+          <img src="irmao1.png" alt="Mascote Chave" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='logo.png';"/>
           <h4>Mascote Chave</h4>
           <p>Comunica confiança e agilidade no atendimento.</p>
         </div>
         <div class="card">
-          <img src="https://picsum.photos/seed/mascote2/600/400" width="600" height="400" alt="Mascote Registro" loading="lazy" decoding="async"/>
+          <img src="irmao2.png" alt="Mascote Registro" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='logo.png';"/>
           <h4>Mascote Registro</h4>
           <p>Reflete precisão técnica e qualidade.</p>
         </div>
@@ -204,13 +204,13 @@
       <!-- GALERIA: troque pelos seus arquivos locais quando publicar -->
       <div class="gallery" aria-label="Fotos ilustrativas de serviços hidráulicos">
         <picture>
-          <img referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1719257767993-6b9cb9a1b3f8?auto=format&fit=crop&w=1600&q=80" width="1600" height="1100" alt="Profissional ajustando tubulação sob a pia (Unsplash)" loading="lazy" decoding="async"/>
+          <img src="https://images.unsplash.com/photo-1719257767993-6b9cb9a1b3f8?auto=format&fit=crop&w=1600&q=80" width="1600" height="1100" alt="Profissional ajustando tubulação sob a pia (Unsplash)" loading="lazy" decoding="async"/>
         </picture>
         <picture>
-          <img referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1603882234692-f346ec8561d6?auto=format&fit=crop&w=1600&q=80" width="1600" height="1100" alt="Técnico trabalhando sob a pia (Unsplash)" loading="lazy" decoding="async"/>
+          <img src="https://images.unsplash.com/photo-1603882234692-f346ec8561d6?auto=format&fit=crop&w=1600&q=80" width="1600" height="1100" alt="Técnico trabalhando sob a pia (Unsplash)" loading="lazy" decoding="async"/>
         </picture>
         <picture>
-          <img referrerpolicy="no-referrer" src="https://images.pexels.com/photos/14953886/pexels-photo-14953886.jpeg?auto=compress&cs=tinysrgb&w=1600" width="1600" height="1067" alt="Ferramentas de hidráulica sobre projeto (Pexels)" loading="lazy" decoding="async"/>
+          <img src="https://images.pexels.com/photos/14953886/pexels-photo-14953886.jpeg?auto=compress&cs=tinysrgb&w=1600" width="1600" height="1067" alt="Ferramentas de hidráulica sobre projeto (Pexels)" loading="lazy" decoding="async"/>
         </picture>
       </div>
     </section>
