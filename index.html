@@ -20,7 +20,12 @@
 
   <!-- Performance hints -->
   <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+  <!-- Favicon / PWA basic icons -->
+  <link rel="icon" type="image/png" href="logo.png?v=4" sizes="32x32">
+  <link rel="apple-touch-icon" href="logo.png?v=4">
+  <!-- Preload hero e logo -->
   <link rel="preload" as="image" href="https://images.unsplash.com/photo-1581578017421-dc76da0ed1e8?auto=format&fit=crop&w=2000&q=80" imagesrcset="https://images.unsplash.com/photo-1581578017421-dc76da0ed1e8?auto=format&fit=crop&w=1200&q=80 1200w, https://images.unsplash.com/photo-1581578017421-dc76da0ed1e8?auto=format&fit=crop&w=2000&q=80 2000w" imagesizes="100vw">
+  <link rel="preload" as="image" href="logo.png?v=4">
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-LJ3W2GYMTL"></script>
@@ -48,7 +53,7 @@
     header { background: var(--brand-dark); color: #fff; padding: 10px 20px; position: sticky; top:0; z-index:10; box-shadow:0 2px 8px rgba(0,0,0,.1); }
     .topbar { max-width: 1100px; margin:0 auto; display:flex; align-items:center; gap:16px; }
     .logo { display:flex; align-items:center; gap:12px; }
-    .logo .mark{ height:44px; width:44px; display:grid; place-items:center; background:rgba(255,255,255,.08); border-radius:10px; }
+    .logo .mark{ height:44px; width:44px; display:grid; place-items:center; background:rgba(255,255,255,.08); border-radius:10px; overflow:hidden; }
     .logo h1{ font-size:1.1rem; margin:0; letter-spacing:.3px; }
     nav { margin-left:auto; display:flex; gap:14px; align-items:center; }
     nav a{ font-size:.95rem; opacity:.95 }
@@ -88,6 +93,7 @@
     /* Small helpers */
     .icon{ width:52px; height:52px; margin:0 auto 10px; display:block; }
     svg{ shape-rendering:geometricPrecision }
+    .logo .mark img{width:100%;height:100%;object-fit:contain;display:block}
 
     /* Mascotes placeholder (se quiser inserir depois) */
     .mascotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:16px}
@@ -99,8 +105,8 @@
     <div class="topbar">
       <a class="logo" href="#top" aria-label="Hidráulica dos Irmãos - início">
         <div class="mark" aria-hidden="true">
-          <!-- ÍCONE VÁLVULA INLINE (sem hotlink) -->
-          <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill="#fff" d="M3 10h3V7h2v3h6V7h2v3h5v2h-5v5a2 2 0 0 1-2 2h-1v-2h1v-5H8v5h1v2H8a2 2 0 0 1-2-2v-5H3z"/></svg>
+          <!-- LOGO OFICIAL -->
+          <img class="icon" src="logo.png?v=4" alt="Logomarca Hidráulica dos Irmãos" width="44" height="44" decoding="async" fetchpriority="high" onerror="this.onerror=null; this.src='irmao1.png';" />
         </div>
         <div>
           <h1>Hidráulica dos Irmãos</h1>
